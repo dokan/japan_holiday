@@ -69,7 +69,7 @@ function getJapanHolidays (date) {
 	date.setDate(1);
 
 	var targetWday = array[1];
-	var temp = (7 - date.getDay()) % 7 + targetWday;
+	var temp = (7 - date.getDay() + targetWday) % 7;
 	targetDate += temp;
 
 	targetDate += 7 * (array[0] - 1);
